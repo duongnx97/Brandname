@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif; }
+
+/* Navbar */
+header.header-main {
+  padding: 20px 0;
+  background: transparent;
+  z-index: 10 !important; }
+
+.navbar a {
+  color: white;
+  font-weight: 600; }
+.navbar ul > li {
+  padding-right: 1rem; }
+.navbar .navbar-brand {
+  margin-right: 8%;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.1px; }
+.navbar .collapselink {
+  justify-content: space-between;
+  align-items: center; }
+.navbar .btnlink {
+  align-items: center; }
+  .navbar .btnlink button {
+    margin-left: 40px;
+    padding: .7rem 1rem; }
+    .navbar .btnlink button i {
+      padding-left: 5px; }
+
+/* Slider */
+.slider-main .banner-view {
+  position: relative;
+  min-height: 793px;
+  z-index: 0; }
+  .slider-main .banner-view::before {
+    content: '';
+    background: #00000080;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+.slider-main .banner-v1 {
+  background: url(/imgs/banner.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.slider-info .banner-info {
+  padding: 5em 0 0; }
+
+/*# sourceMappingURL=main.css.map */
