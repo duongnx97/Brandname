@@ -2,8 +2,25 @@
     box-sizing: border-box;
 }
 
+$cl-main: #23A6F0;
+$cl-white: #fff;
+
 body {
     font-family: "Montserrat", sans-serif;
+}
+
+// Button style
+.btn-main {
+    padding: .7rem 1rem;
+    color: $cl-white;
+    background-color: $cl-main;
+    border-color: $cl-main;
+}
+
+.btn-outline-main {
+    @extend .btn-main;
+    border-color: $cl-white;
+    background-color: transparent;
 }
 
 /* Navbar */
@@ -17,7 +34,7 @@ header.header-main {
     align-items: center;
     
     a {
-        color: white;
+        color: $cl-white;
         font-weight: 600;
     }
 
@@ -31,7 +48,7 @@ header.header-main {
         margin-right: 8%;
         font-size: 24px;
         font-weight: 700;
-        color: white;
+        color: $cl-white;
         letter-spacing: 0.1px;
     }
 
@@ -45,7 +62,6 @@ header.header-main {
 
         button {
             margin-left: 40px;
-            padding: .7rem 1rem;
             
             i {
                 padding-left: 5px;
@@ -82,8 +98,35 @@ header.header-main {
     }
 }
 
+@mixin banner-txt($width, $fsize, $fwgt) {
+    max-width: $width;
+    margin: auto;
+    color: white;
+    font-size: $fsize;
+    font-weight: $fwgt;
+    letter-spacing: 0.2px;
+}
+
 .slider-info {
     .banner-info {
-        padding: 5em 0 0;
+        padding: 14rem 0 0;
+
+        h3 {
+            @include banner-txt(695px, 58px, 800);
+            line-height: 80px;
+        }
+
+        p {
+            @include banner-txt(540px, 20px, 500);
+            padding: 40px 0;
+        }
+    }
+
+    .banner-btn {
+        button {
+            border-radius: 50px;
+            margin: 0 .25rem;
+            padding: .7rem 2rem;
+        }
     }
 }
