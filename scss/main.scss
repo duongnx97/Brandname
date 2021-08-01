@@ -3,10 +3,30 @@
 }
 
 $cl-main: #23A6F0;
-$cl-white: #fff;
+$cl-white: #FFFFFF;
+$cl-whiteG: #FAFAFA;
+$cl-black: #00000080;
+$cl-second-txt: #737373;
+
+@import 'breakpoint';
 
 body {
     font-family: "Montserrat", sans-serif;
+}
+
+.bg-main {
+    background-color: $cl-main;
+}
+
+.text-grey {
+    color: $cl-second-txt;
+}
+
+.text-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0.2px;
 }
 
 // Button style
@@ -62,6 +82,9 @@ header.header-main {
 
         button {
             margin-left: 40px;
+            @include breakpoint(max-lg-device) {
+                margin-left: 20px;
+            }
             
             i {
                 padding-left: 5px;
@@ -71,7 +94,7 @@ header.header-main {
 }
 
 /* Slider */
-.slider-main {
+.slider {
     .banner-view {
         position: relative;
         min-height: 793px;
@@ -79,7 +102,7 @@ header.header-main {
 
         &::before {
             content: '';
-            background: #00000080;
+            background: $cl-black;
             opacity: .5;
             position: absolute;
             top: 0;
@@ -101,7 +124,7 @@ header.header-main {
 @mixin banner-txt($width, $fsize, $fwgt) {
     max-width: $width;
     margin: auto;
-    color: white;
+    color: $cl-white;
     font-size: $fsize;
     font-weight: $fwgt;
     letter-spacing: 0.2px;
@@ -127,6 +150,77 @@ header.header-main {
             border-radius: 50px;
             margin: 0 .25rem;
             padding: .7rem 2rem;
+        }
+    }
+}
+
+.slider-card {
+    margin-top: -90px;
+    background-color: $cl-whiteG;
+
+    .card-deck {
+        .card {
+            img  {
+                max-width: 50px;
+                margin: 1.25rem 2.75rem 0;
+            }
+            
+            .card-body {
+                padding: 1.25rem 2.75rem;
+
+                .card-title {
+                    font-weight: 700;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.feature {
+    &-banner {
+        text-align: center;
+    }
+
+    &-items {
+        &-item {
+            .card {
+                padding: 1.25rem;
+            }
+
+            .card-body {
+                padding: 0;
+                padding-left: 1.25rem;
+            }
+
+            img {
+                max-width: 50px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0;
+            }
+
+            h5 {
+                margin-bottom: 0.5rem;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@for $i from 80 through 120 {
+    @if ($i % 10 == 0) {
+        .pt-#{$i} ,.py-#{$i} {
+            padding-top: #{$i}px;
+        }
+        .pb-#{$i} ,.py-#{$i} {
+            padding-bottom: #{$i}px;
         }
     }
 }
