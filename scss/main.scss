@@ -10,12 +10,20 @@ $cl-second-txt: #737373;
 
 @import 'breakpoint';
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
 
 .bg-main {
     background-color: $cl-main;
+}
+
+.bg-whiteG {
+    background-color: $cl-whiteG;
 }
 
 .text-grey {
@@ -27,6 +35,7 @@ body {
     font-weight: 700;
     line-height: 57px;
     letter-spacing: 0.2px;
+    text-transform: capitalize;
 }
 
 // Button style
@@ -180,6 +189,7 @@ header.header-main {
     }
 }
 
+/* Feature */
 .feature {
     &-banner {
         text-align: center;
@@ -188,12 +198,12 @@ header.header-main {
     &-items {
         &-item {
             .card {
-                padding: 1.25rem;
+                padding: 2.5rem 1.25rem;
             }
 
             .card-body {
                 padding: 0;
-                padding-left: 1.25rem;
+                padding-left: 1.75rem;
             }
 
             img {

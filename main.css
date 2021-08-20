@@ -1,11 +1,17 @@
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth !important; }
+
 body {
   font-family: "Montserrat", sans-serif; }
 
 .bg-main {
   background-color: #23A6F0; }
+
+.bg-whiteG {
+  background-color: #FAFAFA; }
 
 .text-grey {
   color: #737373; }
@@ -14,7 +20,8 @@ body {
   font-size: 40px;
   font-weight: 700;
   line-height: 57px;
-  letter-spacing: 0.2px; }
+  letter-spacing: 0.2px;
+  text-transform: capitalize; }
 
 .btn-main, .btn-outline-main {
   padding: .7rem 1rem;
@@ -115,13 +122,14 @@ header.header-main {
     .slider-card .card-deck .card .card-body p {
       margin: 0; }
 
+/* Feature */
 .feature-banner {
   text-align: center; }
 .feature-items-item .card {
-  padding: 1.25rem; }
+  padding: 2.5rem 1.25rem; }
 .feature-items-item .card-body {
   padding: 0;
-  padding-left: 1.25rem; }
+  padding-left: 1.75rem; }
 .feature-items-item img {
   max-width: 50px; }
 .feature-items-item p {
